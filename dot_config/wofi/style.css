@@ -1,0 +1,74 @@
+@define-color main-bg-color rgba(36, 40, 59, 0.6);
+@define-color selected-bg-color rgba(65, 72, 104, 0.8);
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#window {
+    margin: 0px;
+    border: 2px solid #414868;
+    border-radius: 5px;
+    background-color: @main-bg-color;
+    font-size: 12px;
+}
+
+#input {
+    margin: 5px;
+    border: 1px solid #24283b;
+    color: #c0caf5;
+    background-color: @main-bg-color;
+}
+
+#input image {
+    color: #c0caf5;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+}
+
+#expander-box {
+    margin: 5px;
+    border: none;
+    background-color: @main-bg-color;
+}
+
+#scroll {
+    margin: 6px;
+    border: none;
+    background-color: @main-bg-color;
+    color: #c0caf5;
+    filter: blur(1px);
+}
+
+#scrollbar {
+    color: #c0caf5;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #c0caf5;
+}
+
+#entry:selected {
+    background-color: @selected-bg-color;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0px 0px 0px 2px #414868 inset;
+    border-radius: 5px;
+}
+
+#text:selected {
+    font-weight: bold;
+}
+
