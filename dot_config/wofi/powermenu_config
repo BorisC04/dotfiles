@@ -1,0 +1,31 @@
+# mode & placement
+show=dmenu
+location=center
+width=5%
+lines=5
+columns=1
+dynamic_lines=false
+
+# icons
+allow_images
+image_size=36
+
+# search & UX
+matching=fuzzy
+insensitive=true
+hide_scroll=false
+prompt=
+use_search_box=false
+
+# keybinds
+key_up=Ctrl-k
+key_down=Ctrl-j
+key_left=Ctrl-h
+key_right=Ctrl-l
+key_submit=Return
+key_forward=Tab
+key_backward=Shift-ISO_Left_Tab
+key_expand=Ctrl-Return
+
+# stylesheet
+style=/home/boris/.config/wofi/style.css
