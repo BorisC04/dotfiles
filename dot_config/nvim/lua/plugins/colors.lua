@@ -8,6 +8,7 @@ return {
 	config = function()
 	    vim.cmd.colorscheme "tokyonight"
 	    enable_transparency()
+	    vim.o.termguicolors = true
 	end
     },
     {
