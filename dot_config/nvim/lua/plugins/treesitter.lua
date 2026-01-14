@@ -1,19 +1,20 @@
 return {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,
-    build = ":TSUpdate",
+    build = ':TSUpdate',
     config = function()
-	local config = require("nvim-treesitter")
+	local config = require('nvim-treesitter')
 	config.install {
-	    "c",
-	    "lua",
-	    "vim",
-	    "vimdoc",
-	    "query",
-	    "markdown",
-	    "markdown_inline",
-	    "json",
-	    "bash",
+	    'c',
+	    'lua',
+	    'vim',
+	    'vimdoc',
+	    'query',
+	    'markdown',
+	    'markdown_inline',
+	    'json',
+	    'bash',
+	    'hyprlang'
 	}
 	config.setup({
 	    hightlight = {
