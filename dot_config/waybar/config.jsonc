@@ -150,7 +150,7 @@
         "format-ethernet": "Ethernet ",
         "format-disconnected": "Disconnected ⚠",
 	"tooltip-format": "{essid}",
-	"on-click": "nm-applet"
+	"on-click": "nm-connection-editor"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
