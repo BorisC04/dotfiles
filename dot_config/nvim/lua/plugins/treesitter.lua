@@ -14,7 +14,8 @@ return {
 	    'markdown_inline',
 	    'json',
 	    'bash',
-	    'hyprlang'
+	    'hyprlang',
+	    'qmljs'
 	}
 	config.setup({
 	    hightlight = {
