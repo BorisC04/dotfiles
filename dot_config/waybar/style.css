@@ -68,6 +68,8 @@ button {
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
+#custom-powermenu,
+#custom-gpu,
 #mpd {
     padding: 0 8px;
     color: @wht;
@@ -101,4 +103,20 @@ button {
 #pulseaudio {
     color: @ylw;
     border-bottom: 4px solid @ylw;
+}
+#custom-media {
+    color: @fg;
+    border-bottom: 4px solid @fg;
+}
+#custom-powermenu {
+    color: @red;
+    border-bottom: 4px solid @red;
+}
+#custom-gpu {
+    color: @fg;
+    border-bottom: 4px solid @fg;
+}
+#tray {
+    padding: 0 4px;
+    border-bottom: 4px solid @fg;
 }

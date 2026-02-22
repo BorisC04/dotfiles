@@ -6,7 +6,6 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "output": "HDMI-A-1",
-    // Choose the order of the modules
     "modules-left": [
         "hyprland/window"
     ],
@@ -14,15 +13,18 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+	"custom/media",
         "pulseaudio",
         "network",
         "cpu",
         "memory",
+	"custom/gpu",
         // "keyboard-state",
         // "hyprland/language",
         // "battery",
         "clock",
-        "tray"
+        "tray",
+	"custom/powermenu"
 	// "custom/power"
     ],
     // Modules configuration
@@ -102,6 +104,11 @@
         // "format": "RAM: {used}GiB"
         "format": "RAM: {percentage}%"
     },
+    "custom/gpu": {
+	"exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader",
+	"format": "GPU: {}%",
+	"interval":10
+    },
     // "temperature": {
     //     // "thermal-zone": 2,
     //     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -180,19 +187,13 @@
             "default": "🎜"
         },
         "escape": true,
+	"on-click": "playerctl play-pause",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
-    // "custom/power": {
-    //     "format" : "⏻ ",
-    //     	"tooltip": false,
-    //     	"menu": "on-click",
-    //     	"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-    //     	"menu-actions": {
-    //     		"shutdown": "shutdown",
-    //     		"reboot": "reboot",
-    //     		"suspend": "systemctl hybrid-sleep",
-    //     		"hibernate": "systemctl hibernate"
-    //     	}
-    // },
+    "custom/powermenu": {
+	"on-click": "~/.local/bin/powermenu.sh",
+	"format": "⏻ ",
+	"tooltip": false
+    }
 }
