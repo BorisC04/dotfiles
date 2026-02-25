@@ -7,6 +7,7 @@
 @define-color blu   #7aa2f7;
 @define-color mag   #ad8ee6;
 @define-color cyn   #0db9d7;
+@define-color org   #ff9e64;
 @define-color brblk #444b6a;
 @define-color wht   #ffffff;
 
@@ -113,8 +114,8 @@ button {
     border-bottom: 4px solid @red;
 }
 #custom-gpu {
-    color: @fg;
-    border-bottom: 4px solid @fg;
+    color: @org;
+    border-bottom: 4px solid @org;
 }
 #tray {
     padding: 0 4px;
