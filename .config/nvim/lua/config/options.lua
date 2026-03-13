@@ -5,3 +5,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+    callback = function() vim.hl.on_yank() end
+})

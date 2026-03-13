@@ -7,6 +7,7 @@ return {
 	config.install {
 	    'c',
 	    'lua',
+            'cpp',
 	    'vim',
 	    'vimdoc',
 	    'query',
