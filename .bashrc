@@ -8,7 +8,12 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias tree='tree -C'
-PS1='[\u@\h \W]\$ '
+
+GREEN="\[$(tput setaf 2)\]"
+BOLD="\[$(tput bold)\]"
+RESET="\[$(tput sgr0)\]"
+
+PS1="\W ${GREEN}${BOLD}> ${RESET}"
 
 alias sl='sl -ew5'
 
