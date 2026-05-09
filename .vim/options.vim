@@ -1,6 +1,7 @@
 set number
 set relativenumber
 set cursorline
+set nomodeline
 
 filetype plugin indent on
 set expandtab
