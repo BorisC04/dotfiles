@@ -2,3 +2,5 @@
 .github
 
 ^/README.*
+
+.vim/.netrwhist
