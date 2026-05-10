@@ -28,7 +28,7 @@ autoload -U compinit && compinit
 bindkey -e
 
 # History
-HISTSIZE=1000
+HISTSIZE=500
 HISTFILE=~/.histfile
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
