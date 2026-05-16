@@ -27,6 +27,11 @@ autoload -U compinit && compinit
 # emacs mode
 bindkey -e
 
+# restoring functionality of Delete, Home and End keys
+bindkey "^[[3~" delete-char
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
 # History
 HISTSIZE=500
 HISTFILE=~/.histfile
