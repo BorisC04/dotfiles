@@ -1,6 +1,4 @@
-.git
-.github
+\.git
+\.github
 
 ^/README.*
-
-.vim/.netrwhist
