@@ -51,28 +51,28 @@ hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }))
 
 -- Move windows with mainMod + SHIFT + arrow keys / hjkl
-hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left"}))
-hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right"}))
-hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up"}))
-hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down"}))
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left"}))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right"}))
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up"}))
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down"}))
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Resize windows with mainMod + CTRL + arrow keys / hjkl
-hl.bind(mainMod .. " + CTRL + left", hl.dsp.window.resize({ x = -20, y = 0}))
-hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.resize({ x = 20, y = 0}))
-hl.bind(mainMod .. " + CTRL + up", hl.dsp.window.resize({ x = 0, y = -20}))
-hl.bind(mainMod .. " + CTRL + down", hl.dsp.window.resize({ x = 0, y = 20}))
-hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -20, y = 0}))
-hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 20, y = 0}))
-hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = -20}))
-hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = 20}))
+hl.bind(mainMod .. " + CTRL + left", hl.dsp.window.resize({ x = -20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.resize({ x = 20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + up", hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + down", hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 20, y = 0, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = -20, relative = true }), { repeating = true })
+hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { repeating = true })
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
