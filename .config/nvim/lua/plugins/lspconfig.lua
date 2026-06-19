@@ -18,16 +18,11 @@ return {
 	    },
 	})
 
-        for server, config in pairs(opts.servers) do
-            vim.lsp.config(server, config)
-            vim.lsp.enable(server)
-        end
-
-	-- qmlls for quickshell needs to be setup this way to work
-	-- vim.lsp.config('qmlls', {
-	--uarc site:www.reddit.com     cmd = {'qmlls', '-E'},
-	--     filetypes = { 'qml' }
-	-- })
-	-- vim.lsp.enable('qmlls')
+	 -- qmlls for quickshell needs to be setup this way to work
+        -- vim.lsp.config('qmlls', {
+        --     cmd = {'qmlls', '-E'},
+        --     filetypes = { 'qml' }
+        -- })
+        -- vim.lsp.enable('qmlls')
     end
 }
