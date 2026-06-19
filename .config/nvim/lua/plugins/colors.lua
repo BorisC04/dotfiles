@@ -5,11 +5,21 @@ end
 return {
     {
 	"folke/tokyonight.nvim",
-	config = function()
+        opts = {
+            style = "night",
+            on_colors = function(colors)
+            end,
+            on_highlights = function(hl, colors)
+                hl.LineNrAbove = { fg = colors.dark3 }
+                hl.LineNrBelow = { fg = colors.dark3}
+            end,
+        },
+	config = function(_, opts)
+            require("tokyonight").setup(opts)
 	    vim.cmd.colorscheme "tokyonight"
 	    enable_transparency()
 	    vim.o.termguicolors = true
-	end
+	end,
     },
     {
 	"nvim-lualine/lualine.nvim",

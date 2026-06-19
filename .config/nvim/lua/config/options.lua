@@ -9,3 +9,8 @@ vim.g.netrw_bufsettings = "noma nomod nu nobl nowrap ro"
 vim.api.nvim_create_autocmd('TextYankPost', {
     callback = function() vim.hl.on_yank() end
 })
+
+vim.diagnostic.config({
+    virtual_text = true,
+    underline = true
+})
