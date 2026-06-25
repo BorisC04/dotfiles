@@ -16,7 +16,10 @@ return {
 	    'json',
 	    'bash',
 	    'hyprlang',
-	    'qmljs'
+	    'qmljs',
+            'html',
+            'css',
+            'javascript'
 	}
 	config.setup({
 	    hightlight = {

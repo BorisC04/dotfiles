@@ -6,6 +6,17 @@ return {
 	'WhoIsSethDaniel/mason-tool-installer.nvim',
     },
     opts = {
+        servers = {
+            lua_ls = {
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                    },
+                },
+            },
+        },
     },
     config = function(_, opts)
         require('mason').setup()
@@ -13,10 +24,14 @@ return {
 	require('mason-tool-installer').setup({
 	    ensure_installed = {
 		'lua_ls',
-		'qmlls',
-                'clangd',
+                'clangd',  -- C++
 	    },
 	})
+
+        for server, config in pairs(opts.servers) do
+            vim.lsp.config(server, config)
+            vim.lsp.enable(server)
+        end
 
 	 -- qmlls for quickshell needs to be setup this way to work
         -- vim.lsp.config('qmlls', {
@@ -26,3 +41,4 @@ return {
         -- vim.lsp.enable('qmlls')
     end
 }
+
