@@ -31,6 +31,7 @@ hl.window_rule({
 
 hl.window_rule({ match = { class = "nm-connection-editor"}, float = true})
 hl.window_rule({ match = { class = "blueman-manager"}, float = true})
+hl.window_rule({ match = { title = "galculator"}, float = true})
 
 -- Layer rules
 hl.layer_rule({ match = { namespace = "wofi" }, blur = true})
