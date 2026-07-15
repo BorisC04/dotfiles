@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
       -- Optional: trigger autocompletion on EVERY keypress. May be slow!
       -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
       -- client.server_capabilities.completionProvider.triggerCharacters = chars
-      vim.lsp.completion.enable(true, client.id, ev.buf, {autotrigger = true})
+      -- vim.lsp.completion.enable(true, client.id, ev.buf, {autotrigger = true})
     end
   end,
 })
