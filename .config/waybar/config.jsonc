@@ -32,6 +32,7 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
+        "on-click": "activate",
         "format": "{name}",
 	"persistent-workspaces": {
 	    "*": 5
@@ -180,16 +181,18 @@
     },
     "custom/media": {
         "format": "{icon} {text}",
+        "escape": true,
         "return-type": "json",
         "max-length": 40,
+        "interval": 30,
         "format-icons": {
             "spotify": "",
             "default": "🎜"
         },
-        "escape": true,
 	"on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        // "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
     },
     "custom/powermenu": {
 	"on-click": "~/.local/bin/powermenu.sh",
