@@ -18,11 +18,6 @@ hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + SHIFT + ALT + CTRL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(menuKill .. " || ~/.local/bin/powermenu.sh"))
 
--- dwindle
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo)
-hl.bind(mainMod .. " + R", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + mouse:274", hl.dsp.layout("togglesplit"))
-
 -- Monitors
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("nwg-displays"))
 
