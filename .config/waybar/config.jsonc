@@ -32,6 +32,7 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
+        "show-special": true,
         "on-click": "activate",
         "format": "{name}",
 	"persistent-workspaces": {
@@ -180,11 +181,10 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{icon} {text}",
+        "format": "{icon} {}",
         "escape": true,
         "return-type": "json",
         "max-length": 40,
-        "interval": 30,
         "format-icons": {
             "spotify": "",
             "default": "🎜"
