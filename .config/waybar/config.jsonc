@@ -13,6 +13,7 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "cava",
 	"custom/media",
         "pulseaudio",
         "network",
@@ -25,7 +26,6 @@
         "clock",
         "tray",
 	"custom/powermenu"
-	// "custom/power"
     ],
     // Modules configuration
     "hyprland/workspaces": {
@@ -185,14 +185,14 @@
         "escape": true,
         "return-type": "json",
         "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
 	"on-click": "playerctl play-pause",
         "on-click-right": "playerctl stop",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
+    },
+    "cava": {
+        "cava_config": "$HOME/.config/cava/config",
+        // "framerate": 30,
+	"input_delay": 4
     },
     "custom/powermenu": {
 	"on-click": "~/.local/bin/powermenu.sh",
