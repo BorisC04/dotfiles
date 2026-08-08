@@ -22,8 +22,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-autoload -U compinit && compinit
-
 # emacs mode
 bindkey -e
 
@@ -77,4 +75,4 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-fpath+=~/.zfunc; autoload -Uz compinit; compinit
+fpath+=~/.zfunc; autoload -Uz compinit; compinit -d "$HOME/.cache/zsh/.zcompdump"
