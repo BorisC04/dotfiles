@@ -14,13 +14,14 @@
 window {
     transparency:     "real";
     background-color: rgba(26, 27, 38, 80%);
-    width: 5%;
+    width: 7%;
     anchor: center;
     location: center;
 }
 mainbox {
     padding:      0px 0px 0px 0px;
     border-color: var(outline-color);
+    border-radius: 20px;
     spacing:      0px ;
     children:     [ "message","listview" ];
     border:       1px;
@@ -28,13 +29,13 @@ mainbox {
 textbox {
     border-color: var(outline-color);
     text-color: var(outline-color);
-    border:       1px 0px ;
+    border: 0px 0px 1px 0;
     horizontal-align: 0.5;
 }
 listview {
     margin:    0px 0px 0px 0px ;
     scrollbar: false;
-    lines: 5;
+    lines: 4;
     layout: vertical;
     flow: horizontal;
     cycle: true;

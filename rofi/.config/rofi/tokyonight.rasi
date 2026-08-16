@@ -22,6 +22,7 @@ mainbox {
     spacing:      0px ;
     children:     [ "message","inputbar","listview","mode-switcher" ];
     border:       1px;
+    border-radius: 20px;
 }
 inputbar {
     padding: 30px 20px 10px 20px;
@@ -87,11 +88,14 @@ scrollbar {
     border-color:     var(outline-color);
     handle-color:     var(outline-color);
     border:           0px 1px ;
+    border-radius: 10px;
+    handle-rounded-corners: true;
 }
 element {
     padding:   30px 0px;
     highlight: bold underline ;
     spacing:   5px ;
+    border-radius: 10px;
     children:  [ "element-icon","element-text" ];
 }
 element normal {
