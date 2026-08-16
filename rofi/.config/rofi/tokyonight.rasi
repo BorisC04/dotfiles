@@ -1,0 +1,138 @@
+* {
+    urgent-red:           rgba( 255, 83, 112, 100% );
+    spacing:          0;
+    background-color: transparent;
+    button-background: rgba( 52, 59, 88, 30% );
+    outline-color: rgba(117, 173, 236, 100%);
+    selected-color: rgba(86, 95, 137, 70%);
+    active-color:           rgba( 195, 232, 141, 100% );
+    foreground-color: #c0caf5;
+}
+* {
+    text-transform: bold;
+}
+window {
+    transparency:     "real";
+    background-color: rgba(26, 27, 38, 80%);
+    width: 40%;
+}
+mainbox {
+    padding:      0px 0px 0px 0px;
+    border-color: var(outline-color);
+    spacing:      0px ;
+    children:     [ "message","inputbar","listview","mode-switcher" ];
+    border:       1px;
+}
+inputbar {
+    padding: 30px 20px 10px 20px;
+    border-color: var(outline-color);
+    border: 0px 0px 1px 0px;
+    children: [ "prompt","textbox-prompt-colon","entry","case-indicator" ];
+}
+prompt {
+    text-color: var(outline-color);
+    font: "mono 16";
+}
+textbox-prompt-colon {
+    margin:     0px 1.0000ch 0px 0px ;
+    expand:     false;
+    str:        ":";
+    text-color: var(outline-color);
+    font: "mono 16";
+}
+entry {
+    text-color: var(foreground-color);
+    placeholder: "Type to search...";
+    placeholder-color: grey;
+    font: "mono 16";
+}
+case-indicator {
+    text-color: var(urgent-red);
+    font: "mono 16";
+}
+mode-switcher {
+    border-color: var(outline-color);
+    border:       1px 0 0 0;
+}
+message {
+    border-color: var(outline-color);
+    border:       1px 0px ;
+}
+button {
+    padding:          5px ;
+    background-color: var(button-background);
+    text-color:       var(foreground-color);
+}
+button selected {
+    background-color: var(selected-color);
+}
+textbox {
+    padding:          5px ;
+    background-color: var(button-background);
+    text-color:       var(foreground-color);
+}
+listview {
+    margin:    0px 0px 0px 0px ;
+    scrollbar: true;
+    lines: 5;
+    columns: 2;
+    layout: vertical;
+    flow: horizontal;
+    cycle: true;
+}
+scrollbar {
+    background-color: var(button-background);
+    margin:           0px 0px 0px 0px ;
+    handle-width:     10px ;
+    border-color:     var(outline-color);
+    handle-color:     var(outline-color);
+    border:           0px 1px ;
+}
+element {
+    padding:   30px 0px;
+    highlight: bold underline ;
+    spacing:   5px ;
+    children:  [ "element-icon","element-text" ];
+}
+element normal {
+    background-color: transparent;
+}
+element normal.normal {
+    text-color: var(foreground-color);
+}
+element normal.urgent {
+    text-color: var(urgent-red);
+}
+element normal.active {
+    text-color: var(active-color);
+}
+element selected {
+    background-color: var(selected-color);
+}
+element selected.normal {
+    text-color: var(foreground-color);
+}
+element selected.urgent {
+    text-color: var(urgent-red);
+}
+element selected.active {
+    text-color: var(active-color);
+}
+element alternate.normal {
+    text-color: var(foreground-color);
+}
+element alternate.urgent {
+    text-color: var(urgent-red);
+}
+element alternate.active {
+    text-color: var(active-color);
+}
+element-text {
+    foreground-color: inherit;
+    text-color:       inherit;
+}
+element-icon {
+    foreground-color: inherit;
+    text-color:       inherit;
+    size: 40px;
+}

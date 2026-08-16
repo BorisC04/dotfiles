@@ -1,0 +1,85 @@
+* {
+    urgent-red:           rgba( 255, 83, 112, 100% );
+    spacing:          0;
+    background-color: transparent;
+    button-background: rgba( 52, 59, 88, 30% );
+    outline-color: rgba(117, 173, 236, 100%);
+    selected-color: rgba(86, 95, 137, 70%);
+    active-color:           rgba( 195, 232, 141, 100% );
+    foreground-color: #c0caf5;
+}
+* {
+    text-transform: bold;
+}
+window {
+    transparency:     "real";
+    background-color: rgba(26, 27, 38, 80%);
+    width: 5%;
+    anchor: center;
+    location: center;
+}
+mainbox {
+    padding:      0px 0px 0px 0px;
+    border-color: var(outline-color);
+    spacing:      0px ;
+    children:     [ "message","listview" ];
+    border:       1px;
+}
+textbox {
+    border-color: var(outline-color);
+    text-color: var(outline-color);
+    border:       1px 0px ;
+    horizontal-align: 0.5;
+}
+listview {
+    margin:    0px 0px 0px 0px ;
+    scrollbar: false;
+    lines: 5;
+    layout: vertical;
+    flow: horizontal;
+    cycle: true;
+}
+element {
+    padding:   30px 0px;
+    highlight: bold underline;
+    spacing:   5px ;
+    children:  ["element-text"];
+}
+element normal {
+    background-color: transparent;
+}
+element normal.normal {
+    text-color: var(foreground-color);
+}
+element normal.urgent {
+    text-color: var(urgent-red);
+}
+element normal.active {
+    text-color: var(active-color);
+}
+element selected {
+    background-color: var(selected-color);
+}
+element selected.normal {
+    text-color: var(foreground-color);
+}
+element selected.urgent {
+    text-color: var(urgent-red);
+}
+element selected.active {
+    text-color: var(active-color);
+}
+element alternate.normal {
+    text-color: var(foreground-color);
+}
+element alternate.urgent {
+    text-color: var(urgent-red);
+}
+element alternate.active {
+    text-color: var(active-color);
+}
+element-text {
+    foreground-color: inherit;
+    text-color:       inherit;
+    horizontal-align: 0.5;
+}

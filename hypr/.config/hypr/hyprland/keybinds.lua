@@ -1,8 +1,9 @@
 -- PROGRAMS VARIABLES
 local terminal = "foot"
 local fileManager = "thunar"
-local menu = "wofi --show drun"
-local menuKill = "pkill wofi"
+-- local menu = "wofi --show drun"
+local menu = "rofi -show drun"
+local menuKill = "pkill rofi"
 
 
 -- KEYBINDINGS
@@ -21,7 +22,7 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("nwg-displays"))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(menuKill .. " || " .. menu))
-hl.bind(mainMod .. " + Comma", hl.dsp.exec_cmd(menuKill .. " || rofimoji --action clipboard"))
+hl.bind(mainMod .. " + Comma", hl.dsp.exec_cmd(menuKill .. " || rofimoji"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("steam"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("zen-browser"))

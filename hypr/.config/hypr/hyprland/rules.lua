@@ -34,5 +34,6 @@ hl.window_rule({ match = { class = "blueman-manager"}, float = true})
 hl.window_rule({ match = { title = "galculator"}, float = true})
 
 -- Layer rules
+hl.layer_rule({ match = { namespace = "rofi" }, no_anim = true})
 hl.layer_rule({ match = { namespace = "wofi" }, blur = true})
 hl.layer_rule({ match = { class = "swaync-notication-window"}, blur = false})
