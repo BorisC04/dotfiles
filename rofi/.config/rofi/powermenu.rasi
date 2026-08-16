@@ -15,6 +15,7 @@ window {
     transparency:     "real";
     background-color: rgba(26, 27, 38, 80%);
     width: 7%;
+    border-radius: 20px;
     anchor: center;
     location: center;
 }
