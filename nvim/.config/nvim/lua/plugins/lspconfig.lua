@@ -16,6 +16,9 @@ return {
                     },
                 },
             },
+            clangd = {
+                mason = false,
+            };
         },
     },
     config = function(_, opts)
@@ -24,7 +27,6 @@ return {
 	require('mason-tool-installer').setup({
 	    ensure_installed = {
 		'lua_ls',
-                'clangd',  -- C++
 	    },
 	})
 
