@@ -18,7 +18,7 @@ return {
             },
             clangd = {
                 mason = false,
-            };
+            },
         },
     },
     config = function(_, opts)
