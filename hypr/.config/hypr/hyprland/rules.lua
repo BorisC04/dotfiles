@@ -24,6 +24,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    match = {
+        modal = true
+    },
+    float = true
+})
+
+hl.window_rule({
     match = { title = "Picture-in-Picture"},
     float = true,
     keep_aspect_ratio = true,
