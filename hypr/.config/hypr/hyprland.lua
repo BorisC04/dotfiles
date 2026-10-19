@@ -1,4 +1,4 @@
 require("monitors")
 require("workspaces")
 require("./hyprland/*")
-require("./hyprland/*/*")
+require("./hyprland/extra/*")
