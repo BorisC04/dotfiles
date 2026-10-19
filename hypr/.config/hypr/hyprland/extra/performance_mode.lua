@@ -1,5 +1,4 @@
 hl.bind("SUPER + F1", function ()
-    hl.exec_cmd("notify-send 'hi'")
     local active = (hl.get_config("animations.enabled") == false)
 
     if active then
