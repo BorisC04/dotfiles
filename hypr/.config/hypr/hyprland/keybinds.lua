@@ -5,12 +5,29 @@ local fileManager = "thunar"
 local menu = "rofi -show drun"
 local menuKill = "pkill rofi"
 
+-- check tag method
+local function hasTag(window, tag)
+    if not window then return false end
+    for _, t in ipairs(window.tags or {}) do
+        if t == tag then
+            return true
+        end
+    end
+    return false
+end
+
 
 -- KEYBINDINGS
 local mainMod = "SUPER"
 
 -- Functions
-hl.bind(mainMod .. " + C", hl.dsp.window.close())
+hl.bind(mainMod .. " + C", function()
+    -- check if window is protected with tags
+    if not hasTag(hl.get_active_window(), "protected*") then
+        hl.dispatch(hl.dsp.window.close())
+    end
+end)
+
 hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + SHIFT + ALT + CTRL + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(menuKill .. " || ~/.local/bin/powermenu.sh"))
@@ -34,18 +51,6 @@ hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a -f hex"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region output --clipboard-only"))
 hl.bind(mainMod .. " + SHIFT + ALT + S", hl.dsp.exec_cmd("hyprshot -m window output --clipboard-only"))
 hl.bind(mainMod .. " + SHIFT + CTRL + S", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
-
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, 10 do
-    local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
-end
-
--- Special workspace
-hl.bind(mainMod .. " + grave", hl.dsp.workspace.toggle_special("~"))
-hl.bind(mainMod .. " + SHIFT + grave", hl.dsp.window.move({ workspace = "special:~"}))
 
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })

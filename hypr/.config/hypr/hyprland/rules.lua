@@ -55,6 +55,9 @@ hl.window_rule({
     immediate = true,
 })
 
+-- Set windows protected
+hl.window_rule({ match = { class = "UnrealEditor", title = ".*( - Unreal Editor)" }, tag = "+protected"})
+
 -- Fix FL Studio on wine
 hl.window_rule({ match = { initial_title = "FL Studio 2026"}, float = false, allows_input = true })
 
