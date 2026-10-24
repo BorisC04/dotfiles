@@ -5,9 +5,9 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar & hyprpaper & blueman-applet & swaync & hypridle")
     hl.exec_cmd("discord --start-minimized")
     hl.exec_cmd("steam -silent")
-    hl.exec_cmd("systemctl --user start hyprpolkitagent")
     hl.exec_cmd("fcitx5 --replace -d")
     hl.exec_cmd("easyeffects --gapplication-service")
+    hl.exec_cmd("keepassxc --minimized")
 end)
 
 -- ENVIRONMENT VARIABLES
