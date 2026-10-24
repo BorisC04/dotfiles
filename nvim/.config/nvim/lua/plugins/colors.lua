@@ -11,7 +11,7 @@ return {
             end,
             on_highlights = function(hl, colors)
                 hl.LineNrAbove = { fg = colors.dark3 }
-                hl.LineNrBelow = { fg = colors.dark3}
+                hl.LineNrBelow = { fg = colors.dark3 }
             end,
         },
 	config = function(_, opts)
